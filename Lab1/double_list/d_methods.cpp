@@ -31,11 +31,9 @@ List::Node* List::search_index(int n)
 {
 	if (n < 0){
 		throw invalid_argument("can't search index < 0");
-		return nullptr;
 	}
 	if (n >= length()){
 		throw invalid_argument("can't search index > length");
-		return nullptr;
 	}
 
 	Node* ptr = first;
@@ -56,12 +54,10 @@ List::Node* List::search_index(int n)
 void List::remove(int index) {
 	if (index < 0){
 		throw invalid_argument("can't insert index < 0");
-		return;
 	}
 
 	if (index >= length()){
 		throw invalid_argument("out of range");
-		return;
 	}
 
    Node* element = search_index(index);
@@ -95,16 +91,14 @@ void List::insert(int data, int index)
 	Node* element = (Node*)malloc(sizeof(Node));
 	if (index < 0){
 		throw invalid_argument("can't insert index < 0");
-		return;
 	}
 
 	if (index > length()){
 		throw invalid_argument("out of range");
-		return;
 	}
 
 	element->n = data;
-    element->next = nullptr;
+  element->next = nullptr;
 	element->prev = nullptr;
 	int counter = 0;
 
@@ -155,12 +149,10 @@ void List::move(int index, int n){
 
 	if (index < 0 || index >= length()){
 		throw invalid_argument("invalid index of element");
-		return;
 	}
 
 	if (index + n >= length() || index + n < 0){
 		throw invalid_argument("moving is impossible");
-		return;
 	}
 
 	Node* element = search_index(index);
