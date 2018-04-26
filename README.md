@@ -1,6 +1,10 @@
 # DiscreteStructures
 
-Lab1: To write the program for moving an element on n positions in the list (V1).
+Lab1: Написать программу передвижения элемента списка на n позиций.
+
+Lab2: Описать функцию, которая:
+a) присваивает параметру Е запись из самого левого листа непустого дерева Т (лист-вершина, из которого не выходит ни одной ветви);
+b) определяет число вхождений записи Е в дерево Т.
 
 To run lists on Linux/Unix system:
 
